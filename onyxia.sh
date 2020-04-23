@@ -6,6 +6,9 @@ REPO_URL=https://github.com/RLesur/learnr-onixya.git
 mkdir /home/rstudio/tutoriel
 git clone $REPO_URL /home/rstudio/tutoriel
 
+# Install dependencies
+Rscript -e "remotes::install_deps(dependencies = TRUE, upgrade = FALSE)"
+
 # Open the project
 echo \
 "
