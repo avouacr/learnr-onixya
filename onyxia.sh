@@ -7,7 +7,7 @@ mkdir /home/rstudio/tutoriel
 git clone $REPO_URL /home/rstudio/tutoriel
 
 # Install dependencies
-Rscript -e "remotes::install_deps(dependencies = TRUE, upgrade = FALSE)"
+Rscript -e "remotes::install_deps(pkgdir = '/home/rstudio/tutoriel', dependencies = TRUE, upgrade = FALSE)"
 
 # Open the project
 echo \
