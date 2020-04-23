@@ -1,6 +1,6 @@
 #!/bin/sh
 
-REPO_URL=https://github.com/rlesur/learnr-onixya.git
+REPO_URL=https://github.com/RLesur/learnr-onixya.git
 
 # Clone the repository in /home/rstudio/tutoriel
 mkdir /home/rstudio/tutoriel
