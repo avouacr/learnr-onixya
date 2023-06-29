@@ -7,7 +7,7 @@ TUTO_DIR=/home/onyxia/work/tutoriel
 git clone $REPO_URL $TUTO_DIR
 
 # Install dependencies
-Rscript -e "remotes::install_deps(pkgdir = ${TUTO_DIR}, dependencies = TRUE, upgrade = FALSE)"
+Rscript -e "remotes::install_deps(pkgdir = '${TUTO_DIR}', dependencies = TRUE, upgrade = FALSE)"
 
 # Open the project
 echo \
