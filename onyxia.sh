@@ -21,12 +21,4 @@ setHook('rstudio.sessionInit', function(newSession) {
     rstudioapi::openProject('${TUTO_DIR}')
   }
 }, action = 'append')
-
-setHook('rstudio.sessionInit', function(newSession) {
-  if (newSession && identical(getwd(), '${TUTO_DIR}'))
-  {
-    message('Ouverture du tutoriel')
-    rstudioapi::navigateToFile("demo/demo.Rmd")
-  }
-}, action = 'append')
 " >> /home/onyxia/.Rprofile
