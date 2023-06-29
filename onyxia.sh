@@ -19,6 +19,7 @@ setHook('rstudio.sessionInit', function(newSession) {
   {
     message('Ouverture du tutoriel')
     rstudioapi::openProject('${TUTO_DIR}')
+    rstudioapi::navigateToFile("demo/demo.Rmd")
   }
 }, action = 'append')
 " >> /home/onyxia/.Rprofile
