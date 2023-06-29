@@ -17,8 +17,15 @@ echo \
 setHook('rstudio.sessionInit', function(newSession) {
   if (newSession && identical(getwd(), '${WORK_DIR}'))
   {
-    message('Ouverture du tutoriel')
+    message('Activation du projet RStudio')
     rstudioapi::openProject('${TUTO_DIR}')
+  }
+}, action = 'append')
+
+setHook('rstudio.sessionInit', function(newSession) {
+  if (newSession && identical(getwd(), '${TUTO_DIR}'))
+  {
+    message('Ouverture du tutoriel')
     rstudioapi::navigateToFile("demo/demo.Rmd")
   }
 }, action = 'append')
