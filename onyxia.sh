@@ -19,4 +19,4 @@ setHook('rstudio.sessionInit', function(newSession) {
     rstudioapi::openProject('~/work/tutoriel')
   }
 }, action = 'append')
-" >> /home/rstudio/.Rprofile
+" >> /home/onyxia/.Rprofile
