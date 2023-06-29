@@ -1,7 +1,8 @@
 #!/bin/sh
 
 REPO_URL=https://github.com/avouacr/learnr-onixya.git
-TUTO_DIR=/home/onyxia/work/tutoriel
+WORK_DIR=/home/onyxia/work
+TUTO_DIR=${WORK_DIR}/tutoriel
 
 # Clone the repository in /home/rstudio/tutoriel
 git clone $REPO_URL $TUTO_DIR
@@ -14,10 +15,10 @@ Rscript -e "remotes::install_deps(pkgdir = '${TUTO_DIR}', dependencies = TRUE, u
 echo \
 "
 setHook('rstudio.sessionInit', function(newSession) {
-  if (newSession && identical(getwd(), path.expand('~')))
+  if (newSession && identical(getwd(), '${WORK_DIR}'))
   {
     message('Ouverture du tutoriel')
-    rstudioapi::openProject('~/work/tutoriel')
+    rstudioapi::openProject('${TUTO_DIR}')
   }
 }, action = 'append')
 " >> /home/onyxia/.Rprofile
