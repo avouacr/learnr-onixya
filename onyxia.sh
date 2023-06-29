@@ -5,6 +5,7 @@ TUTO_DIR=/home/onyxia/work/tutoriel
 
 # Clone the repository in /home/rstudio/tutoriel
 git clone $REPO_URL $TUTO_DIR
+chown -R onyxia:users $TUTO_DIR
 
 # Install dependencies
 Rscript -e "remotes::install_deps(pkgdir = '${TUTO_DIR}', dependencies = TRUE, upgrade = FALSE)"
