@@ -1,6 +1,6 @@
 setHook("rstudio.sessionInit", function(newSession) {
  if (newSession)
   {
-    rstudioapi::navigateToFile("demo/demo.Rmd")
+    rstudioapi::navigateToFile("demo/sect01_seq_01(1).qmd")
   }
 }, action = "append")
