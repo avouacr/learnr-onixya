@@ -6,7 +6,7 @@ TUTO_DIR=${WORK_DIR}/tutoriel
 
 # Clone the repository in /home/rstudio/tutoriel
 git clone $REPO_URL $TUTO_DIR
-mc cp s3/avouacr/sect01_seq_01(1).qmd $TUTO_DIR/demo/sect01_seq_01(1).qmd
+mc cp s3/avouacr/demo.qmd $TUTO_DIR/demo/demo.qmd
 chown -R onyxia:users $TUTO_DIR
 
 # Install dependencies
